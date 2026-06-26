@@ -29,6 +29,12 @@ PLATFORM_DEFAULTS = {
     "douyin": {"name": "抖音", "ratio": "9:16", "duration": "60 秒"},
     "xiaohongshu": {"name": "小红书", "ratio": "3:4 或 9:16", "duration": "45-75 秒"},
     "bilibili": {"name": "B站", "ratio": "16:9 或 9:16", "duration": "90-180 秒"},
+    "kuaishou": {"name": "快手", "ratio": "9:16", "duration": "45-90 秒"},
+    "shipinhao": {"name": "微信视频号", "ratio": "9:16", "duration": "45-120 秒"},
+    "xigua": {"name": "西瓜视频", "ratio": "16:9 或 9:16", "duration": "1-5 分钟"},
+    "zhihu": {"name": "知乎", "ratio": "16:9 或 9:16", "duration": "1-5 分钟"},
+    "weibo": {"name": "微博", "ratio": "9:16 或 16:9", "duration": "30-90 秒"},
+    "baijiahao": {"name": "百家号", "ratio": "16:9 或 9:16", "duration": "1-5 分钟"},
     "youtube": {"name": "YouTube Shorts", "ratio": "9:16", "duration": "45-60 秒"},
     "tiktok": {"name": "TikTok", "ratio": "9:16", "duration": "35-60 秒"},
     "instagram": {"name": "Instagram Reels", "ratio": "9:16", "duration": "30-60 秒"},
@@ -558,6 +564,89 @@ def build_viral_distribution_pack(project: ProjectInput) -> str:
     ).strip()
 
 
+def build_domestic_distribution_pack(project: ProjectInput) -> str:
+    return dedent(
+        f"""
+        # 国内平台分发包
+
+        ## 推荐发布顺序
+
+        1. 抖音：先测钩子和封面，35-75 秒。
+        2. 小红书：测封面审美和收藏，30-75 秒。
+        3. B站：做系列沉淀，90-240 秒或竖屏短视频。
+        4. 微信视频号：测熟人社交分享，45-120 秒。
+        5. 快手：测泛人群信任和叙事，45-90 秒。
+        6. 西瓜/知乎/百家号：把验证过的选题扩写成中视频和图文。
+        7. 微博：借热点和争议问题做扩散。
+
+        ## 平台改写
+
+        抖音：
+        - 标题：{project.figure}真正害怕的不是敌人
+        - 封面：没有退路
+        - 开头：他赢了，但更危险的事才刚开始。
+        - 结尾：这是果断，还是赌徒式冒险？
+
+        快手：
+        - 标题：{project.figure}这一步，换来了什么代价？
+        - 封面：赢后的代价
+        - 开头：如果你是他，这一步可能也很难不走。
+        - 结尾：你觉得他是没得选，还是太冒险？
+
+        微信视频号：
+        - 标题：{project.figure}的关键选择，改变了后来的历史
+        - 封面：关键一刻
+        - 开头：有些历史转折，不在战场，而在一个人的选择里。
+        - 结尾：你会把这个选择称为智慧，还是代价？
+
+        小红书：
+        - 标题：历史记住了胜利，却漏掉了代价
+        - 封面：赢后的代价
+        - 开头：这可能是{project.figure}最值得重看的一个瞬间。
+        - 结尾：这类“胜利后的代价”，你还想看谁？
+
+        B站：
+        - 标题：{project.figure}为什么走到没有退路？一条短片讲清关键选择
+        - 封面：没有退路
+        - 开头：今天只讲一个问题：{project.topic}。
+        - 结尾：下一集可以展开这个选择之后的连锁反应。
+
+        西瓜视频：
+        - 标题：{project.figure}关键选择完整解析：胜利背后的代价
+        - 封面：胜利之后
+        - 开头：短视频讲选择，中视频补背景、地图和后果。
+        - 结尾：用时间线解释这个选择为什么不可逆。
+
+        知乎：
+        - 标题：如何评价{project.figure}的这个关键选择？
+        - 封面：如何评价
+        - 开头：先分清史实、主流解释和艺术化演绎。
+        - 结尾：给出资料来源和争议点，邀请补充。
+
+        微博：
+        - 标题：{project.figure}这一步到底是果断还是冒险？
+        - 封面：果断吗
+        - 开头：一个争议判断 + 视频。
+        - 结尾：用话题标签引导转评。
+
+        百家号：
+        - 标题：{project.figure}关键选择：历史转折与人物代价
+        - 封面：历史转折
+        - 开头：关键词清楚，便于搜索。
+        - 结尾：可扩写成图文版，沉淀百度搜索。
+
+        ## 国内复盘指标
+
+        - 抖音/快手：3 秒留存、完播率、评论/千次播放、关注转化。
+        - 视频号：转发、朋友圈互动、主页访问。
+        - 小红书：封面点击、收藏、评论、关注。
+        - B站：完播、弹幕、收藏、投币、关注。
+        - 知乎/百家号：搜索流量、阅读、收藏、可信评论。
+        - 微博：转发、评论、话题扩散。
+        """
+    ).strip()
+
+
 def write_readme(project: ProjectInput, path: Path) -> None:
     command = (
         "python3 ~/.codex/skills/history-animation-video/scripts/one_click_pipeline.py "
@@ -586,6 +675,7 @@ def write_readme(project: ProjectInput, path: Path) -> None:
             - `05_editing_plan.md`：剪辑规则。
             - `06_publish_pack.md`：标题、封面文案、简介、标签。
             - `07_viral_distribution.md`：传播钩子、A/B 测试、海外分发包。
+            - `08_domestic_distribution.md`：国内平台分发包。
 
             ## 重新生成
 
@@ -650,6 +740,7 @@ def main() -> int:
     write_text(project.output_dir / "05_editing_plan.md", build_editing_plan(project))
     write_text(project.output_dir / "06_publish_pack.md", build_publish_pack(project))
     write_text(project.output_dir / "07_viral_distribution.md", build_viral_distribution_pack(project))
+    write_text(project.output_dir / "08_domestic_distribution.md", build_domestic_distribution_pack(project))
     write_readme(project, project.output_dir / "README.md")
 
     elapsed = time.time() - started

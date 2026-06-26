@@ -1,6 +1,6 @@
 ---
 name: history-animation-video
-description: Create customized historical-figure AI animation video self-media plans, viral short-video hooks, workflows, scripts, storyboards, image/video prompts, low-cost tool stacks, overseas publishing plans, content calendars, and API-ready one-click production systems. Use when the user asks to enter history character animation video, make viral AI historical shorts, customize a creator account, generate a one-click media plan, produce scripts/storyboards/prompts for historical figures, compare cost-effective AI video production workflows, or publish historical animation content on foreign platforms.
+description: Create customized historical-figure AI animation video self-media plans, viral short-video hooks, workflows, scripts, storyboards, image/video prompts, low-cost tool stacks, domestic and overseas publishing plans, content calendars, and API-ready one-click production systems. Use when the user asks to enter history character animation video, make viral AI historical shorts, customize a creator account, generate a one-click media plan, produce scripts/storyboards/prompts for historical figures, compare cost-effective AI video production workflows, or publish historical animation content on Chinese or foreign platforms.
 ---
 
 # History Animation Video
@@ -40,7 +40,7 @@ If the user asks Codex to customize directly, collect missing inputs only when n
 
 Use or infer these fields:
 
-- Platform: Douyin, Bilibili, Xiaohongshu, YouTube Shorts, TikTok, Instagram Reels, Facebook Reels, Snapchat Spotlight, Pinterest, X, or mixed.
+- Platform: Douyin, Kuaishou, WeChat Channels, Xiaohongshu, Bilibili, Xigua, Zhihu, Weibo, Baijiahao, YouTube Shorts, TikTok, Instagram Reels, Facebook Reels, Snapchat Spotlight, Pinterest, X, or mixed.
 - Audience: students, office workers, parents, history fans, overseas Chinese, or general public.
 - Niche: Chinese history, world history, emperors, generals, women in history, strategists, scientists, local history, mythology-adjacent history.
 - Style: cinematic, ink-painting, anime, documentary, comic, clay, paper-cut.
@@ -65,8 +65,9 @@ Return a complete plan with these sections:
 9. Compliance and risk: AI label, historical uncertainty, copyright, platform sensitivity, ad/monetization constraints.
 10. Iteration rules: what metrics to track and how to adjust next batch.
 11. Viral distribution pack: hook variants, title/cover A/B tests, retention beats, comment triggers, remix/reply prompts, and cross-platform rewrite rules.
-12. Overseas platform matrix: primary platforms, secondary platforms, language strategy, recommended cadence, and format changes.
-13. If APIs are provided: produce a safe `.env` plan, provider config, adapter mapping, and one-click command. Never hard-code API keys in generated code or markdown.
+12. Domestic platform matrix: primary Chinese platforms, secondary platforms, search platforms, cadence, and packaging changes.
+13. Overseas platform matrix: primary platforms, secondary platforms, language strategy, recommended cadence, and format changes.
+14. If APIs are provided: produce a safe `.env` plan, provider config, adapter mapping, and one-click command. Never hard-code API keys in generated code or markdown.
 
 Keep outputs concrete. Avoid generic advice unless it directly informs a decision.
 
@@ -99,6 +100,7 @@ Keep outputs concrete. Avoid generic advice unless it directly informs a decisio
 
 - Read `references/content-system.md` when building positioning, topic systems, scripts, or calendars.
 - Read `references/viral-growth.md` when optimizing for fast spread, retention, comments, titles, covers, and A/B testing.
+- Read `references/domestic-platforms.md` when recommending Chinese publishing platforms or adapting one video for Douyin, Kuaishou, WeChat Channels, Xiaohongshu, Bilibili, Xigua, Zhihu, Weibo, or Baijiahao.
 - Read `references/global-platforms.md` when recommending foreign publishing platforms or adapting one video for multiple overseas channels.
 - Read `references/prompt-templates.md` when producing character, image, video, voice, cover, and title prompts.
 - Read `references/tool-stack.md` when comparing low-cost production stacks. Verify current prices from official sources before recommending paid subscriptions.
