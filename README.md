@@ -81,6 +81,9 @@ The pipeline is designed to connect user-provided APIs for text, image, video, v
 
 Do not commit API keys. Put secrets in `.env` and use:
 
+- `references/api-setup-cost-effective.md`
+- `references/api-config.siliconflow.example.json`
+- `references/env.siliconflow.example`
 - `references/api-config.example.json`
 - `references/env.example`
 - `references/api-integration.md`
@@ -93,5 +96,6 @@ Do not commit API keys. Put secrets in `.env` and use:
 - `references/viral-growth.md`: viral structure and A/B testing
 - `references/domestic-platforms.md`: Chinese platform distribution strategy
 - `references/global-platforms.md`: overseas distribution strategy
+- `references/api-setup-cost-effective.md`: low-cost API configuration plan
 - `references/prompt-templates.md`: reusable prompts
 - `references/tool-stack.md`: cost-effective tool choices

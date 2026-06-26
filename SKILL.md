@@ -105,3 +105,4 @@ Keep outputs concrete. Avoid generic advice unless it directly informs a decisio
 - Read `references/prompt-templates.md` when producing character, image, video, voice, cover, and title prompts.
 - Read `references/tool-stack.md` when comparing low-cost production stacks. Verify current prices from official sources before recommending paid subscriptions.
 - Read `references/api-integration.md` when connecting user-provided APIs into the one-click pipeline.
+- Read `references/api-setup-cost-effective.md` when the user asks which APIs to provide, how to configure API keys, or how to minimize API cost.

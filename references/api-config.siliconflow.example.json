@@ -1,0 +1,47 @@
+{
+  "providers": {
+    "text": {
+      "type": "openai_compatible_chat",
+      "baseUrl": "https://api.siliconflow.cn/v1",
+      "model": "deepseek-ai/DeepSeek-V4-Flash",
+      "apiKeyEnv": "SILICONFLOW_API_KEY",
+      "temperature": 0.7,
+      "timeout": 90
+    },
+    "image": {
+      "type": "siliconflow_image",
+      "baseUrl": "https://api.siliconflow.cn/v1",
+      "model": "Tongyi-MAI/Z-Image-Turbo",
+      "apiKeyEnv": "SILICONFLOW_API_KEY",
+      "imageSize": "720x1280",
+      "timeout": 120
+    },
+    "voice": {
+      "type": "siliconflow_tts",
+      "baseUrl": "https://api.siliconflow.cn/v1",
+      "model": "fnlp/MOSS-TTSD-v0.5",
+      "voice": "fnlp/MOSS-TTSD-v0.5:alex",
+      "responseFormat": "mp3",
+      "apiKeyEnv": "SILICONFLOW_API_KEY",
+      "timeout": 120
+    },
+    "video": {
+      "type": "siliconflow_video",
+      "baseUrl": "https://api.siliconflow.cn/v1",
+      "model": "Wan-AI/Wan2.2-I2V-A14B",
+      "apiKeyEnv": "SILICONFLOW_API_KEY",
+      "imageSize": "720x1280",
+      "pollIntervalSeconds": 5,
+      "timeout": 600
+    },
+    "edit": {
+      "type": "local_ffmpeg",
+      "outputFormat": "mp4",
+      "reviewBeforeExport": true
+    },
+    "upload": {
+      "type": "manual",
+      "reviewBeforePublish": true
+    }
+  }
+}
