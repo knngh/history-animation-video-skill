@@ -1,0 +1,7 @@
+interface:
+  display_name: "历史人物动画视频"
+  short_description: "一键定制历史人物 AI 动画视频账号方案"
+  default_prompt: "Use $history-animation-video to generate a customized historical-character AI animation video channel plan."
+
+policy:
+  allow_implicit_invocation: true

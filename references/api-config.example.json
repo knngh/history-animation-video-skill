@@ -1,0 +1,32 @@
+{
+  "providers": {
+    "text": {
+      "type": "openai_compatible_chat",
+      "baseUrl": "https://example.com/v1",
+      "model": "replace-with-model",
+      "apiKeyEnv": "TEXT_API_KEY",
+      "temperature": 0.7,
+      "timeout": 90
+    },
+    "image": {
+      "type": "provider_specific",
+      "name": "replace-with-image-tool",
+      "apiKeyEnv": "IMAGE_API_KEY"
+    },
+    "video": {
+      "type": "provider_specific",
+      "name": "replace-with-video-tool",
+      "apiKeyEnv": "VIDEO_API_KEY"
+    },
+    "voice": {
+      "type": "provider_specific",
+      "name": "replace-with-voice-tool",
+      "apiKeyEnv": "VOICE_API_KEY"
+    },
+    "edit": {
+      "type": "manual_or_provider_specific",
+      "name": "replace-with-edit-tool",
+      "apiKeyEnv": "EDIT_API_KEY"
+    }
+  }
+}
